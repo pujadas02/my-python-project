@@ -1,0 +1,25 @@
+name: Workflow Demo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs: 
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@latest
+
+        - name: Set up python
+          uses: actions/setup-python@latest
+
+        - name: install dependencies
+          run: pip install -r requirements.txt
+
+        - name: Run tests
+          run: pytest 
