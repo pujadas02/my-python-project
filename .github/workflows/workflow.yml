@@ -18,6 +18,8 @@ jobs:
         - name: Set up python
           uses: actions/setup-python@v2
 
-        
+        - name: to install pytest
+          run: pip install pytest
+
         - name: Run tests
           run: pytest 
