@@ -13,10 +13,10 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Checkout code
-          uses: actions/checkout@latest
+          uses: actions/checkout@v2
 
         - name: Set up python
-          uses: actions/setup-python@latest
+          uses: actions/setup-python@v2
 
         - name: install dependencies
           run: pip install -r requirements.txt
